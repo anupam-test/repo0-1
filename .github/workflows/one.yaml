@@ -1,0 +1,13 @@
+name: test-vars
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  display-variables:
+    runs-on: ubuntu-latest
+    environment: abc
+    steps:        
+    - name: Use variables
+      run: |
+        echo "env variable : ${{ vars.ENV_VAR }}"
